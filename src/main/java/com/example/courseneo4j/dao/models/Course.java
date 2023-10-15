@@ -1,2 +1,17 @@
-package com.example.courseneo4j.dao.models;public class Course {
+package com.example.courseneo4j.dao.models;
+
+import lombok.Data;
+import org.springframework.data.neo4j.core.schema.GeneratedValue;
+import org.springframework.data.neo4j.core.schema.Id;
+import org.springframework.data.neo4j.core.schema.Node;
+
+@Node
+@Data
+public class Course {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String identifier;
+    private String title;
+    private String teacher;
 }
