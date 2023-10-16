@@ -24,10 +24,8 @@ public class CourseController {
     }
 
     @GetMapping("/{identifier}")
-    public ResponseEntity<Course> courseIndex(@PathVariable String identifier) {
+    public ResponseEntity<Course> getCourse(@PathVariable String identifier) {
         return ResponseEntity.ok(courseService.getCourse(identifier));
     }
-
-
 
 }
